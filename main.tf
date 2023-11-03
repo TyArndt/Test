@@ -1,5 +1,5 @@
 mmodule "kafka_instance" {
-  source = "cloudposse/ec2-instance/aws?ref=v0.50.0"
+  source = "cloudposse/terraform-aws-ec2-instance?ref=v0.50.0"
   # Cloud Posse recommends pinning every module to a specific version
   # version     = "x.x.x"
   ssh_key_pair                = "test"
