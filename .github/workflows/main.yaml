@@ -20,6 +20,6 @@ jobs:
         uses: HENNGE/tfupdate-action@v1.0.7
         with:
           resource: "module"
-          module_name: "cloudposse/terraform-aws-ec2-instance"
+          module_name: "git::https://github.com/cloudposse/terraform-aws-ec2-instance"
           source_type: "github"
           base_branch: "main"
