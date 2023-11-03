@@ -1,7 +1,7 @@
 name: Terraform Update
 
 on: 
-workflow_dispatch:
+  workflow_dispatch:
 
 env:
   # To use hub command in Github Action: https://github.com/github/hub#github-actions
