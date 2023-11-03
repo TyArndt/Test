@@ -22,3 +22,4 @@ jobs:
           resource: "module"
           module_name: "cloudposse/terraform-aws-ec2-instance"
           source_type: "github"
+          base_branch: "main"
