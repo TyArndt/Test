@@ -1,0 +1,23 @@
+name: Terraform Update
+
+on: workflow_dispatch:
+
+env:
+  # To use hub command in Github Action: https://github.com/github/hub#github-actions
+  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+  # If you use personal token, replace email/user accordingly
+  USER_EMAIL: action@github.com
+  USER_NAME: GitHub Action
+
+jobs:
+  run_tfupdate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Update terraform module
+        uses: HENNGE/tfupdate-action@v1.0.7
+        with:
+          resource: "module"
+          module_name: "cloudposse/terraform-aws-ec2-instance"
+          source_type: "github"
