@@ -4,9 +4,7 @@ on:
 
 jobs:
 permissions:
-  contents: write
-
-- name: Conventional Changelog Action
+  - name: Conventional Changelog Action
   uses: TriPSs/conventional-changelog-action@v3
   with:
     github-token: ${{ secrets.github_token }}
