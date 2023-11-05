@@ -5,7 +5,7 @@ on:
 
 env:
   # To use hub command in Github Action: https://github.com/github/hub#github-actions
-  GITHUB_TOKEN: ${{ secrets.TOKEN }}
+  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
   # If you use personal token, replace email/user accordingly
   USER_EMAIL: action@github.com
   USER_NAME: GitHub Action
