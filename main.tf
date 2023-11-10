@@ -54,3 +54,22 @@ module "kafka_instance" {
 resource "aws_s3_bucket" "bucket" {
   name = "mybucket"
 }
+
+resource "aws_s3_bucket" "bucket2" {
+  name = "Hey-123"
+  tags = {
+    Name        = "My Bucket"
+    Description = " This is my cool stuff"
+    env         = "Dev"
+  }
+}
+
+terraform {
+  required_version = ">= 1.2.0, < 2.0.0"
+  required_providers {
+    aws = {
+      source  = "hashicorp/aws"
+      version = "~> 5.0"
+    }
+  }
+}
