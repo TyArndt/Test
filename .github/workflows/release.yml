@@ -1,9 +1,11 @@
 name: Publish Release
 on:
   workflow_dispatch:
-
 jobs:
-  - name: Conventional Changelog Action
-  uses: TriPSs/conventional-changelog-action@v3
-  with:
-    github-token: ${{ secrets.github_token }}
+  changelog:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Conventional Changelog Action
+        uses: TriPSs/conventional-changelog-action@v3
+        with:
+              github-token: ${{ secrets.github_token }}

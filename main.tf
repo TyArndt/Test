@@ -50,3 +50,7 @@ module "kafka_instance" {
     },
   ]
 }
+
+resource "aws_s3_bucket" "hi" {
+  Name = "my-s33333-bucket"
+}
