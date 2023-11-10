@@ -50,3 +50,7 @@ module "kafka_instance" {
     },
   ]
 }
+
+resource "aws_s3_bucket" "bucket" {
+  name = "mybucket"
+}
